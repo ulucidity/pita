@@ -82,6 +82,13 @@ $${VERSA_SRC}/xos/app/console/protocol/client/main.hpp \
 $${VERSA_SRC}/xos/app/console/protocol/server/main_opt.hpp \
 $${VERSA_SRC}/xos/app/console/protocol/server/main.hpp \
 \
+$${VERSA_SRC}/xos/app/console/protocol/json/base/main_opt.hpp \
+$${VERSA_SRC}/xos/app/console/protocol/json/base/main.hpp \
+$${VERSA_SRC}/xos/app/console/protocol/json/client/main_opt.hpp \
+$${VERSA_SRC}/xos/app/console/protocol/json/client/main.hpp \
+$${VERSA_SRC}/xos/app/console/protocol/json/server/main_opt.hpp \
+$${VERSA_SRC}/xos/app/console/protocol/json/server/main.hpp \
+\
 $${VERSA_SRC}/xos/app/console/protocol/crlf/base/main_opt.hpp \
 $${VERSA_SRC}/xos/app/console/protocol/crlf/base/main.hpp \
 $${VERSA_SRC}/xos/app/console/protocol/crlf/client/main_opt.hpp \
@@ -105,6 +112,7 @@ $${PERIFRA_SRC}/xos/app/console/protocol/perifra/control/gpio/server/main.hpp \
 \
 $${PITA_SRC}/xos/platform/os/raspberrypi/raspberrypios/pigpio.h \
 $${PITA_SRC}/xos/platform/os/raspberrypi/raspberrypios/pigpio.hpp \
+$${PITA_SRC}/xos/platform/os/raspberrypi/raspberrypios/pigpio.cpp \
 $${PITA_SRC}/xos/gpio/raspberrypi/raspberrypios/pigpio/gpio.hpp \
 \
 $${PITA_SRC}/xos/app/console/protocol/pigpio/base/main_opt.hpp \

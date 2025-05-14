@@ -128,12 +128,12 @@ $${PITA_SRC}/xos/app/console/protocol/pigpio/client/main.cpp \
 # pigpiop FRAMEWORKS
 #
 pigpiop_FRAMEWORKS += \
-$${pita_FRAMEWORKS} \
+$${pita_json_FRAMEWORKS} \
 
 # pigpiop LIBS
 #
 pigpiop_LIBS += \
-$${pita_LIBS} \
+$${pita_json_LIBS} \
 
 ########################################################################
 # NO Qt

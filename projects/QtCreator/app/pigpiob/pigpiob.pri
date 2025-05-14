@@ -156,12 +156,12 @@ $${PITA_SRC}/xos/app/console/network/sockets/protocol/pigpio/base/main.cpp \
 # pigpiob FRAMEWORKS
 #
 pigpiob_FRAMEWORKS += \
-$${pita_FRAMEWORKS} \
+$${pita_json_FRAMEWORKS} \
 
 # pigpiob LIBS
 #
 pigpiob_LIBS += \
-$${pita_LIBS} \
+$${pita_json_LIBS} \
 
 ########################################################################
 # NO Qt

@@ -533,6 +533,8 @@ $${pita_os_LIBS} \
 # pita pigpio LIBS
 #
 pita_pigpio_LIBS += \
+$${libjson_LIBS} \
+$${argo_LIBS} \
 $${pita_base_LIBS} \
 $${build_pita_LIBS} \
 $${pita_os_pigpio_LIBS} \

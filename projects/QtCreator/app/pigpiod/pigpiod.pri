@@ -82,6 +82,13 @@ $${VERSA_SRC}/xos/app/console/protocol/client/main.hpp \
 $${VERSA_SRC}/xos/app/console/protocol/server/main_opt.hpp \
 $${VERSA_SRC}/xos/app/console/protocol/server/main.hpp \
 \
+$${VERSA_SRC}/xos/app/console/protocol/json/base/main_opt.hpp \
+$${VERSA_SRC}/xos/app/console/protocol/json/base/main.hpp \
+$${VERSA_SRC}/xos/app/console/protocol/json/client/main_opt.hpp \
+$${VERSA_SRC}/xos/app/console/protocol/json/client/main.hpp \
+$${VERSA_SRC}/xos/app/console/protocol/json/server/main_opt.hpp \
+$${VERSA_SRC}/xos/app/console/protocol/json/server/main.hpp \
+\
 $${VERSA_SRC}/xos/app/console/protocol/crlf/base/main_opt.hpp \
 $${VERSA_SRC}/xos/app/console/protocol/crlf/base/main.hpp \
 $${VERSA_SRC}/xos/app/console/protocol/crlf/client/main_opt.hpp \
@@ -102,6 +109,13 @@ $${RETE_SRC}/xos/app/console/network/sockets/client/main_opt.hpp \
 $${RETE_SRC}/xos/app/console/network/sockets/client/main.hpp \
 $${RETE_SRC}/xos/app/console/network/sockets/server/main_opt.hpp \
 $${RETE_SRC}/xos/app/console/network/sockets/server/main.hpp \
+\
+$${RETE_SRC}/xos/app/console/network/sockets/protocol/json/base/main_opt.hpp \
+$${RETE_SRC}/xos/app/console/network/sockets/protocol/json/base/main.hpp \
+$${RETE_SRC}/xos/app/console/network/sockets/protocol/json/client/main_opt.hpp \
+$${RETE_SRC}/xos/app/console/network/sockets/protocol/json/client/main.hpp \
+$${RETE_SRC}/xos/app/console/network/sockets/protocol/json/server/main_opt.hpp \
+$${RETE_SRC}/xos/app/console/network/sockets/protocol/json/server/main.hpp \
 \
 $${RETE_SRC}/xos/app/console/network/sockets/protocol/crlf/base/main_opt.hpp \
 $${RETE_SRC}/xos/app/console/network/sockets/protocol/crlf/base/main.hpp \
@@ -173,4 +187,3 @@ $${pita_pigpio_LIBS} \
 ########################################################################
 # NO Qt
 QT -= gui core
-

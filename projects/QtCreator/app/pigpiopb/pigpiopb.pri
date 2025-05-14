@@ -81,6 +81,13 @@ $${VERSA_SRC}/xos/app/console/protocol/client/main.hpp \
 $${VERSA_SRC}/xos/app/console/protocol/server/main_opt.hpp \
 $${VERSA_SRC}/xos/app/console/protocol/server/main.hpp \
 \
+$${VERSA_SRC}/xos/app/console/protocol/json/base/main_opt.hpp \
+$${VERSA_SRC}/xos/app/console/protocol/json/base/main.hpp \
+$${VERSA_SRC}/xos/app/console/protocol/json/client/main_opt.hpp \
+$${VERSA_SRC}/xos/app/console/protocol/json/client/main.hpp \
+$${VERSA_SRC}/xos/app/console/protocol/json/server/main_opt.hpp \
+$${VERSA_SRC}/xos/app/console/protocol/json/server/main.hpp \
+\
 $${VERSA_SRC}/xos/app/console/protocol/crlf/base/main_opt.hpp \
 $${VERSA_SRC}/xos/app/console/protocol/crlf/base/main.hpp \
 $${VERSA_SRC}/xos/app/console/protocol/crlf/client/main_opt.hpp \
@@ -129,12 +136,12 @@ $${PITA_SRC}/xos/app/console/protocol/pigpio/base/main.cpp \
 # pigpiopb FRAMEWORKS
 #
 pigpiopb_FRAMEWORKS += \
-$${pita_FRAMEWORKS} \
+$${pita_json_FRAMEWORKS} \
 
 # pigpiopb LIBS
 #
 pigpiopb_LIBS += \
-$${pita_LIBS} \
+$${pita_json_LIBS} \
 
 ########################################################################
 # NO Qt

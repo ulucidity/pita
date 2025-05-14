@@ -139,12 +139,12 @@ $${PITA_SRC}/xos/app/console/protocol/pigpio/http/cgi/client/main.cpp \
 # pigpiocgi FRAMEWORKS
 #
 pigpiocgi_FRAMEWORKS += \
-$${pita_FRAMEWORKS} \
+$${pita_json_FRAMEWORKS} \
 
 # pigpiocgi LIBS
 #
 pigpiocgi_LIBS += \
-$${pita_LIBS} \
+$${pita_json_LIBS} \
 
 ########################################################################
 # NO Qt
