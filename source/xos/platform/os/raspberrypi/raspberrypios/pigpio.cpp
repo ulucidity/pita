@@ -41,24 +41,33 @@ static xos::platform::raspberrypi::gpio* the_gpio = 0;
 /// ...Initialise / ...Terminate
 int gpioInitialise(void) {
     int err = 1;
-    LOGGER_LOG_INFO("(void)...");
+    LOGGER_LOG_INFO("((the_pinout = new xos::platform::raspberrypi::pinout()))...");
     if ((the_pinout = new xos::platform::raspberrypi::pinout())) {
+        LOGGER_LOG_INFO("((the_gpio = new xos::platform::raspberrypi::gpio()))...");
         if ((the_gpio = new xos::platform::raspberrypi::gpio())) {
+            LOGGER_LOG_INFO("return err = 0...");
             return err = 0;
         }
+        LOGGER_LOG_INFO("delete the_pinout...");
         delete the_pinout;
+        LOGGER_LOG_INFO("the_pinout = 0...");
         the_pinout = 0;
     }
     return err;
 }
 void gpioTerminate(void) {
-    LOGGER_LOG_INFO("(void)...");
+    LOGGER_LOG_INFO("((the_gpio))...");
     if ((the_gpio)) {
+        LOGGER_LOG_INFO("delete the_gpio...");
         delete the_gpio;
+        LOGGER_LOG_INFO("the_gpio = 0...");
         the_gpio = 0;
     }
+    LOGGER_LOG_INFO("((the_pinout))...");
     if ((the_pinout)) {
+        LOGGER_LOG_INFO("delete the_pinout...");
         delete the_pinout;
+        LOGGER_LOG_INFO("the_pinout = 0...");
         the_pinout = 0;
     }
 }
