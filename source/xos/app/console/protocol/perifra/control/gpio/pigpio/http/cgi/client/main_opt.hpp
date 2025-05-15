@@ -66,46 +66,6 @@
     XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTVAL_C}, \
 
 ///////////////////////////////////////////////////////////////////////
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPT "pigpio-on"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_NONE
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTARG_RESULT 0
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTARG ""
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTUSE "turn pigpio on"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTVAL_S "N"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTVAL_C 'N'
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTION \
-   {XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTARG_REQUIRED, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTARG_RESULT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTVAL_C}, \
-
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPT "pigpio-off"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_NONE
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTARG_RESULT 0
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTARG ""
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTUSE "turn pigpio off"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTVAL_S "F"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTVAL_C 'F'
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTION \
-   {XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTARG_REQUIRED, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTARG_RESULT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTVAL_C}, \
-
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPT "pigpio-state"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_NONE
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTARG_RESULT 0
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTARG ""
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTUSE "get pigpio state"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTVAL_S "S"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTVAL_C 'S'
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTION \
-   {XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTARG_REQUIRED, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTARG_RESULT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTVAL_C}, \
-
-///////////////////////////////////////////////////////////////////////
 #define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_INFO_OPT "system-info"
 #define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_INFO_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_NONE
 #define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_INFO_OPTARG_RESULT 0
@@ -246,10 +206,6 @@ public:
       gpio_off_option_(XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPT),
       gpio_state_option_(XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPT),
     
-      pigpio_on_option_(XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPT),
-      pigpio_off_option_(XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPT),
-      pigpio_state_option_(XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPT),
-    
       system_info_option_(XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_INFO_OPT),
       system_restart_option_(XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPT),
       system_start_option_(XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPT),
@@ -296,6 +252,7 @@ protected:
         int err = 0;
         string_t &request = this->request();
         
+        set_response_was_output(false);
         LOGGER_IS_LOGGED_INFO("(!(err = this->all_connect_run(argc, argv, env)))...");
         if (!(err = this->all_connect_run(argc, argv, env))) {
             LOGGER_IS_LOGGED_INFO("...(!(" << err << " = this->all_connect_run(argc, argv, env)))");
@@ -330,10 +287,8 @@ protected:
     }
     //////////////////////////////////////////////////////////////////////////
     /// ...console_gateway_run
-    virtual int pigpio_on_console_gateway_run(int argc, char_t** argv, char_t** env) {
+    virtual int gpio_on_console_gateway_run(int argc, char_t** argv, char_t** env) {
         int err = 0;
-        string_t &request = this->request();
-
         LOGGER_IS_LOGGED_INFO("this->set_gpio_write_request_on()...");
         this->set_gpio_write_request_on();
 
@@ -347,7 +302,7 @@ protected:
     }
     //////////////////////////////////////////////////////////////////////////
     /// ...console_gateway_run
-    virtual int pigpio_off_console_gateway_run(int argc, char_t** argv, char_t** env) {
+    virtual int gpio_off_console_gateway_run(int argc, char_t** argv, char_t** env) {
         int err = 0;
         LOGGER_IS_LOGGED_INFO("this->set_gpio_write_request_off()...");
         this->set_gpio_write_request_off();
@@ -362,25 +317,10 @@ protected:
     }
     //////////////////////////////////////////////////////////////////////////
     /// ...console_gateway_run
-    virtual int pigpio_state_console_gateway_run(int argc, char_t** argv, char_t** env) {
+    virtual int gpio_state_console_gateway_run(int argc, char_t** argv, char_t** env) {
         int err = 0;
         LOGGER_IS_LOGGED_INFO("this->set_gpio_read_request()...");
         this->set_gpio_read_request();
-
-        LOGGER_IS_LOGGED_INFO("(!(err = any_action_console_gateway_run(argc, argv, env)))...");
-        if (!(err = any_action_console_gateway_run(argc, argv, env))) {
-            LOGGER_IS_LOGGED_INFO("...(!(" << err << " = any_action_console_gateway_run(argc, argv, env)))");
-        } else {
-            LOGGER_IS_LOGGED_INFO("...failed on (!(" << err << " = any_action_console_gateway_run(argc, argv, env)))");
-        }
-        return err;
-    }
-    //////////////////////////////////////////////////////////////////////////
-    /// ...console_gateway_run
-    virtual int system_info_console_gateway_run(int argc, char_t** argv, char_t** env) {
-        int err = 0;
-        LOGGER_IS_LOGGED_INFO("this->set_system_info_request()...");
-        this->set_system_info_request();
 
         LOGGER_IS_LOGGED_INFO("(!(err = any_action_console_gateway_run(argc, argv, env)))...");
         if (!(err = any_action_console_gateway_run(argc, argv, env))) {
@@ -441,45 +381,36 @@ protected:
         int err = 0;
         int unequal = 0;
         const string_t& gpio_on_option = this->gpio_on_option();
-        const string_t& pigpio_on_option = this->pigpio_on_option();
 
-        if (!(unequal = pigpio_on_option.compare(action)) || !(unequal = gpio_on_option.compare(action))) {
-            err = pigpio_on_console_gateway_run(argc, argv, env);
+        if (!(unequal = gpio_on_option.compare(action))) {
+            err = gpio_on_console_gateway_run(argc, argv, env);
         } else {
             const string_t& gpio_off_option = this->gpio_off_option();
-            const string_t& pigpio_off_option = this->pigpio_off_option();
     
-            if (!(unequal = pigpio_off_option.compare(action)) || !(unequal = gpio_off_option.compare(action))) {
-                err = pigpio_off_console_gateway_run(argc, argv, env);
+            if (!(unequal = gpio_off_option.compare(action))) {
+                err = gpio_off_console_gateway_run(argc, argv, env);
             } else {
                 const string_t& gpio_state_option = this->gpio_state_option();
-                const string_t& pigpio_state_option = this->pigpio_state_option();
         
-                if (!(unequal = pigpio_state_option.compare(action)) || !(unequal = gpio_state_option.compare(action))) {
-                    err = pigpio_state_console_gateway_run(argc, argv, env);
+                if (!(unequal = gpio_state_option.compare(action))) {
+                    err = gpio_state_console_gateway_run(argc, argv, env);
                 } else {
-                    const string_t& system_info_option = this->system_info_option();
+                    const string_t& system_restart_option = this->system_restart_option();
             
-                    if (!(unequal = system_info_option.compare(action))) {
-                        err = system_info_console_gateway_run(argc, argv, env);
+                    if (!(unequal = system_restart_option.compare(action))) {
+                        err = system_restart_console_gateway_run(argc, argv, env);
                     } else {
-                        const string_t& system_restart_option = this->system_restart_option();
-                
-                        if (!(unequal = system_restart_option.compare(action))) {
-                            err = system_restart_console_gateway_run(argc, argv, env);
+                        const string_t& system_start_option = this->system_start_option();
+
+                        if (!(unequal = system_start_option.compare(action))) {
+                            err = system_start_console_gateway_run(argc, argv, env);
                         } else {
-                            const string_t& system_start_option = this->system_start_option();
+                            const string_t& system_stop_option = this->system_stop_option();
 
-                            if (!(unequal = system_start_option.compare(action))) {
-                                err = system_start_console_gateway_run(argc, argv, env);
+                            if (!(unequal = system_stop_option.compare(action))) {
+                                err = system_stop_console_gateway_run(argc, argv, env);
                             } else {
-                                const string_t& system_stop_option = this->system_stop_option();
-
-                                if (!(unequal = system_stop_option.compare(action))) {
-                                    err = system_stop_console_gateway_run(argc, argv, env);
-                                } else {
-                                    err = this->all_console_gateway_out_run(argc, argv, env);
-                                }
+                                err = this->all_console_gateway_out_run(argc, argv, env);
                             }
                         }
                     }
@@ -590,6 +521,7 @@ protected:
         if (!(err = before_console_gateway_out_run(argc, argv, env))) {
             this->outln(response);
             if (!(err = after_console_gateway_out_run(argc, argv, env))) {
+                set_response_was_output(true);                
             } else {}
         } else {}
         return err;
@@ -687,32 +619,6 @@ protected:
         return (string_t&) gpio_state_option_;
     }
     //////////////////////////////////////////////////////////////////////////
-    /// ...pigpio...option...
-    virtual string_t& set_pigpio_on_option(const string_t& to) {
-        string_t& pigpio_on_option = this->pigpio_on_option();
-        pigpio_on_option.assign(to);
-        return pigpio_on_option;
-    }
-    virtual string_t& pigpio_on_option() const {
-        return (string_t&) pigpio_on_option_;
-    }
-    virtual string_t& set_pigpio_off_option(const string_t& to) {
-        string_t& pigpio_off_option = this->pigpio_off_option();
-        pigpio_off_option.assign(to);
-        return pigpio_off_option;
-    }
-    virtual string_t& pigpio_off_option() const {
-        return (string_t&) pigpio_off_option_;
-    }
-    virtual string_t& set_pigpio_state_option(const string_t& to) {
-        string_t& pigpio_state_option = this->pigpio_state_option();
-        pigpio_state_option.assign(to);
-        return pigpio_state_option;
-    }
-    virtual string_t& pigpio_state_option() const {
-        return (string_t&) pigpio_state_option_;
-    }
-    //////////////////////////////////////////////////////////////////////////
     /// ...system...option...
     virtual string_t& set_system_info_option(const string_t& to) {
         string_t& system_info_option = this->system_info_option();
@@ -752,7 +658,6 @@ protected:
 protected:
     bool response_was_output_, response_dont_output_;
     string_t gpio_on_option_, gpio_off_option_, gpio_state_option_,
-             pigpio_on_option_, pigpio_off_option_, pigpio_state_option_,
              system_info_option_, system_restart_option_, system_start_option_, system_stop_option_;
 }; /// class main_optt 
 typedef main_optt<> main_opt;

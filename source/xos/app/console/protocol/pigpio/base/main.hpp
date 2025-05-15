@@ -61,6 +61,23 @@ public:
     maint()
     : run_(0), 
       
+      system_restart_request_("{\"pigpio\":{\"system\":{\"system_action\":{\"action\":\"restart\"}}}}"),
+      system_start_request_("{\"pigpio\":{\"system\":{\"system_action\":{\"action\":\"start\"}}}}"),
+      system_stop_request_("{\"pigpio\":{\"system\":{\"system_action\":{\"action\":\"stop\"}}}}"),
+      
+      system_restart_response_("{\"pigpio\":{\"system\":\"restart\"}}"),
+      system_start_response_("{\"pigpio\":{\"system\":\"start\"}}"),
+      system_stop_response_("{\"pigpio\":{\"system\":\"stop\"}}"),
+
+      invalid_request_("{\"pigpio\":{\"request\":\"invalid\"}}"), 
+      invalid_response_(invalid_request_),
+      
+      unknown_request_("{\"pigpio\":{\"request\":\"unknown\"}}"), 
+      unknown_response_(unknown_request_),
+    
+      request_(unknown_request_),
+      response_(unknown_response_), 
+      
       begin_gpioWrite_request_("{\"pigpio\":{\"gpioWrite\":[{\"gpio\":\""), 
       middle_gpioWrite_request_("\"},{\"level\":\""), 
       end_gpioWrite_request_("\"}]}}"),
@@ -73,10 +90,6 @@ public:
       middle_gpioLevel_response_("\"},{\"level\":\""),
       end_gpioLevel_response_("\"}]}}"),
 
-      gpioRestart_request_("{\"pigpio\":{\"gpioSystem\":{\"restart\"}}}"), 
-      gpioStart_request_("{\"pigpio\":{\"gpioSystem\":{\"start\"}}}"),
-      gpioStop_request_("{\"pigpio\":{\"gpioSystem\":{\"stop\"}}}"),
-      
       read_gpio_(22), write_gpio_(17),
       gpio_level_on_(1), gpio_level_off_(0), gpio_level_unknown_(-1),
       read_gpio_level_(gpio_level_unknown_), write_gpio_level_(gpio_level_on_),
@@ -691,6 +704,63 @@ protected:
     //////////////////////////////////////////////////////////////////////////
 
     //////////////////////////////////////////////////////////////////////////
+    /// ...system...
+    virtual string_t& set_system_restart_request() {
+        string_t& to = this->system_restart_request();
+        set_request(to);
+        return request();
+    }
+    virtual string_t& system_restart_request() const {
+        return (string_t&)system_restart_request_;
+    }
+    virtual string_t& system_restart_response() const {
+        return (string_t&)system_restart_response_;
+    }
+    virtual string_t& restart_request() const {
+        return (string_t&)system_restart_request();
+    }
+    virtual string_t& restart_response() const {
+        return (string_t&)system_restart_response();
+    }
+    //////////////////////////////////////////////////////////////////////////
+    virtual string_t& set_system_start_request() {
+        string_t& to = this->system_start_request();
+        set_request(to);
+        return request();
+    }
+    virtual string_t& system_start_request() const {
+        return (string_t&)system_start_request_;
+    }
+    virtual string_t& system_start_response() const {
+        return (string_t&)system_start_response_;
+    }
+    virtual string_t& start_request() const {
+        return (string_t&)system_start_request();
+    }
+    virtual string_t& start_response() const {
+        return (string_t&)system_start_response();
+    }
+    //////////////////////////////////////////////////////////////////////////
+    virtual string_t& set_system_stop_request() {
+        string_t& to = this->system_stop_request();
+        set_request(to);
+        return request();
+    }
+    virtual string_t& system_stop_request() const {
+        return (string_t&)system_stop_request_;
+    }
+    virtual string_t& system_stop_response() const {
+        return (string_t&)system_stop_response_;
+    }
+    virtual string_t& stop_request() const {
+        return (string_t&)system_stop_request();
+    }
+    virtual string_t& stop_response() const {
+        return (string_t&)system_stop_response();
+    }
+    //////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////
     /// ...gpio...request
     /// ...
     virtual string_t& begin_gpioWrite_request() const {
@@ -710,15 +780,6 @@ protected:
     }
     virtual string_t& end_gpioRead_request() const {
         return (string_t&)end_gpioRead_request_;
-    }
-    virtual string_t& gpioRestart_request() const {
-        return (string_t&)gpioRestart_request_;
-    }
-    virtual string_t& gpioStart_request() const {
-        return (string_t&)gpioRestart_request_;
-    }
-    virtual string_t& gpioStop_request() const {
-        return (string_t&)gpioStop_request_;
     }
     virtual string_t& gpio_request() const {
         return (string_t&)gpio_request_;
@@ -861,11 +922,49 @@ protected:
     //////////////////////////////////////////////////////////////////////////
 
     //////////////////////////////////////////////////////////////////////////
+    /// ...invalid...
+    virtual string_t& invalid_request() const {
+        return (string_t&)invalid_request_;
+    }
+    virtual string_t& invalid_response() const {
+        return (string_t&)invalid_response_;
+    }
+    //////////////////////////////////////////////////////////////////////////
+    ///...unknown...
+    virtual string_t& unknown_request() const {
+        return (string_t&)unknown_request_;
+    }
+    virtual string_t& unknown_response() const {
+        return (string_t&)unknown_response_;
+    }
+    //////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////
+    virtual string_t& set_request(const string_t& to) {
+        string_t& request = this->request();
+        request.assign(to);
+        return request;
+    }
+    virtual string_t& request() const {
+        return (string_t&)request_;
+    }
+    virtual string_t& response() const {
+        return (string_t&)response_;
+    }
+    //////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////
 protected:
+    string_t system_restart_request_, system_start_request_, system_stop_request_;
+    string_t system_restart_response_, system_start_response_, system_stop_response_;
+    string_t invalid_request_, invalid_response_;
+    string_t unknown_request_, unknown_response_;
+    string_t request_, response_;
+
     string_t begin_gpioWrite_request_, middle_gpioWrite_request_, end_gpioWrite_request_, 
              begin_gpioRead_request_, middle_gpioRead_request_, end_gpioRead_request_, 
              begin_gpioLevel_response_, middle_gpioLevel_response_, end_gpioLevel_response_, 
-             gpioRestart_request_, gpioStart_request_, gpioStop_request_, gpio_request_, gpio_response_;
+             gpio_request_, gpio_response_;
     int read_gpio_, write_gpio_, 
         gpio_level_on_, gpio_level_off_, gpio_level_unknown_,
         read_gpio_level_, write_gpio_level_, gpio_level_,

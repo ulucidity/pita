@@ -25,83 +25,83 @@
 #include "xos/app/console/network/sockets/protocol/pigpio/client/main.hpp"
 
 ///////////////////////////////////////////////////////////////////////
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPT "pigpio-on"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_NONE
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTARG_RESULT 0
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTARG ""
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTUSE "turn pigpio on"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTVAL_S "N"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTVAL_C 'N'
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTION \
-   {XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTARG_REQUIRED, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTARG_RESULT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPTVAL_C}, \
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_ON_OPT "gpio-on"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_ON_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_NONE
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_ON_OPTARG_RESULT 0
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_ON_OPTARG ""
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_ON_OPTUSE "turn gpio on"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_ON_OPTVAL_S "N"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_ON_OPTVAL_C 'N'
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_ON_OPTION \
+   {XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_ON_OPT, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_ON_OPTARG_REQUIRED, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_ON_OPTARG_RESULT, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_ON_OPTVAL_C}, \
 
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPT "pigpio-off"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_NONE
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTARG_RESULT 0
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTARG ""
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTUSE "turn pigpio off"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTVAL_S "F"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTVAL_C 'F'
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTION \
-   {XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTARG_REQUIRED, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTARG_RESULT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPTVAL_C}, \
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_OFF_OPT "gpio-off"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_OFF_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_NONE
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_OFF_OPTARG_RESULT 0
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_OFF_OPTARG ""
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_OFF_OPTUSE "turn gpio off"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_OFF_OPTVAL_S "F"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_OFF_OPTVAL_C 'F'
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_OFF_OPTION \
+   {XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_OFF_OPT, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_OFF_OPTARG_REQUIRED, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_OFF_OPTARG_RESULT, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_OFF_OPTVAL_C}, \
 
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPT "pigpio-state"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_NONE
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTARG_RESULT 0
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTARG ""
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTUSE "get pigpio state"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTVAL_S "S"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTVAL_C 'S'
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTION \
-   {XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTARG_REQUIRED, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTARG_RESULT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPTVAL_C}, \
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_STATE_OPT "gpio-state"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_STATE_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_NONE
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_STATE_OPTARG_RESULT 0
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_STATE_OPTARG ""
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_STATE_OPTUSE "get gpio state"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_STATE_OPTVAL_S "S"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_STATE_OPTVAL_C 'S'
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_STATE_OPTION \
+   {XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_STATE_OPT, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_STATE_OPTARG_REQUIRED, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_STATE_OPTARG_RESULT, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_STATE_OPTVAL_C}, \
 
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPT "system-restart"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_NONE
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTARG_RESULT 0
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTARG ""
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTUSE "restart system"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTVAL_S "R"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTVAL_C 'R'
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTION \
-   {XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTARG_REQUIRED, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTARG_RESULT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTVAL_C}, \
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPT "system-restart"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_NONE
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTARG_RESULT 0
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTARG ""
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTUSE "restart system"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTVAL_S "R"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTVAL_C 'R'
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTION \
+   {XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPT, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTARG_REQUIRED, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTARG_RESULT, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPTVAL_C}, \
 
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPT "system-start"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_NONE
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTARG_RESULT 0
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTARG ""
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTUSE "start system"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTVAL_S "R"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTVAL_C 'R'
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTION \
-   {XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTARG_REQUIRED, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTARG_RESULT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTVAL_C}, \
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPT "system-start"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_NONE
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTARG_RESULT 0
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTARG ""
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTUSE "start system"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTVAL_S "R"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTVAL_C 'R'
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTION \
+   {XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPT, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTARG_REQUIRED, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTARG_RESULT, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPTVAL_C}, \
 
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPT "system-stop"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_NONE
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTARG_RESULT 0
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTARG ""
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTUSE "stop system"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTVAL_S "T"
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTVAL_C 'T'
-#define XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTION \
-   {XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTARG_REQUIRED, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTARG_RESULT, \
-    XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTVAL_C}, \
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPT "system-stop"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_NONE
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTARG_RESULT 0
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTARG ""
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTUSE "stop system"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTVAL_S "T"
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTVAL_C 'T'
+#define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTION \
+   {XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPT, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTARG_REQUIRED, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTARG_RESULT, \
+    XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPTVAL_C}, \
 
 ///////////////////////////////////////////////////////////////////////
 #define XOS_APP_CONSOLE_PROTOCOL_PIGPIO_HTTP_CGI_CLIENT_MAIN_OPTIONS_CHARS_EXTEND \
@@ -166,13 +166,13 @@ public:
       response_was_output_(false), 
       response_dont_output_(false),
       
-      pigpio_on_option_(XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_ON_OPT),
-      pigpio_off_option_(XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_OFF_OPT),
-      pigpio_state_option_(XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_POWER_STATE_OPT),
+      gpio_on_option_(XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_ON_OPT),
+      gpio_off_option_(XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_OFF_OPT),
+      gpio_state_option_(XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_GPIO_STATE_OPT),
     
-      system_restart_option_(XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPT),
-      system_start_option_(XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPT),
-      system_stop_option_(XOS_APP_CONSOLE_PROTOCOL_PERIFRA_CONTROL_GPIO_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPT) {
+      system_restart_option_(XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_RESTART_OPT),
+      system_start_option_(XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_START_OPT),
+      system_stop_option_(XOS_APP_CONSOLE_PROTOCOL_PIGPIO_NETWORK_CLIENT_MAIN_SYSTEM_STOP_OPT) {
     }
     virtual ~main_optt() {
     }
@@ -250,7 +250,7 @@ protected:
     }
     //////////////////////////////////////////////////////////////////////////
     /// ...console_gateway_run
-    virtual int pigpio_on_console_gateway_run(int argc, char_t** argv, char_t** env) {
+    virtual int gpio_on_console_gateway_run(int argc, char_t** argv, char_t** env) {
         int err = 0;
         LOGGER_IS_LOGGED_INFO("(!(err = this->write_gpio_level_on_run_set(argc, argv, env)))...");
         if (!(err = this->write_gpio_level_on_run_set(argc, argv, env))) {
@@ -268,7 +268,7 @@ protected:
     }
     //////////////////////////////////////////////////////////////////////////
     /// ...console_gateway_run
-    virtual int pigpio_off_console_gateway_run(int argc, char_t** argv, char_t** env) {
+    virtual int gpio_off_console_gateway_run(int argc, char_t** argv, char_t** env) {
         int err = 0;
         LOGGER_IS_LOGGED_INFO("(!(err = this->write_gpio_level_off_run_set(argc, argv, env)))...");
         if (!(err = this->write_gpio_level_off_run_set(argc, argv, env))) {
@@ -286,7 +286,7 @@ protected:
     }
     //////////////////////////////////////////////////////////////////////////
     /// ...console_gateway_run
-    virtual int pigpio_state_console_gateway_run(int argc, char_t** argv, char_t** env) {
+    virtual int gpio_state_console_gateway_run(int argc, char_t** argv, char_t** env) {
         int err = 0;
         LOGGER_IS_LOGGED_INFO("(!(err = this->read_gpio_level_run_set(argc, argv, env)))...");
         if (!(err = this->read_gpio_level_run_set(argc, argv, env))) {
@@ -303,42 +303,117 @@ protected:
         return err;
     }
     //////////////////////////////////////////////////////////////////////////
+    /// ...console_gateway_run
+    virtual int system_restart_console_gateway_run(int argc, char_t** argv, char_t** env) {
+        int err = 0;
+        LOGGER_IS_LOGGED_INFO("this->set_system_restart_request()...");
+        this->set_system_restart_request();
+
+        LOGGER_IS_LOGGED_INFO("(!(err = any_action_console_gateway_run(argc, argv, env)))...");
+        if (!(err = any_action_console_gateway_run(argc, argv, env))) {
+            LOGGER_IS_LOGGED_INFO("...(!(" << err << " = any_action_console_gateway_run(argc, argv, env)))");
+        } else {
+            LOGGER_IS_LOGGED_INFO("...failed on (!(" << err << " = any_action_console_gateway_run(argc, argv, env)))");
+        }
+        return err;
+    }
+    //////////////////////////////////////////////////////////////////////////
+    /// ...console_gateway_run
+    virtual int system_start_console_gateway_run(int argc, char_t** argv, char_t** env) {
+        int err = 0;
+        LOGGER_IS_LOGGED_INFO("this->set_system_start_request()...");
+        this->set_system_start_request();
+
+        LOGGER_IS_LOGGED_INFO("(!(err = any_action_console_gateway_run(argc, argv, env)))...");
+        if (!(err = any_action_console_gateway_run(argc, argv, env))) {
+            LOGGER_IS_LOGGED_INFO("...(!(" << err << " = any_action_console_gateway_run(argc, argv, env)))");
+        } else {
+            LOGGER_IS_LOGGED_INFO("...failed on (!(" << err << " = any_action_console_gateway_run(argc, argv, env)))");
+        }
+        return err;
+    }
+    //////////////////////////////////////////////////////////////////////////
+    /// ...console_gateway_run
+    virtual int system_stop_console_gateway_run(int argc, char_t** argv, char_t** env) {
+        int err = 0;
+        LOGGER_IS_LOGGED_INFO("this->set_system_stop_request()...");
+        this->set_system_stop_request();
+
+        LOGGER_IS_LOGGED_INFO("(!(err = any_action_console_gateway_run(argc, argv, env)))...");
+        if (!(err = any_action_console_gateway_run(argc, argv, env))) {
+            LOGGER_IS_LOGGED_INFO("...(!(" << err << " = any_action_console_gateway_run(argc, argv, env)))");
+        } else {
+            LOGGER_IS_LOGGED_INFO("...failed on (!(" << err << " = any_action_console_gateway_run(argc, argv, env)))");
+        }
+        return err;
+    }
+    //////////////////////////////////////////////////////////////////////////
     /// ...action_console_gateway_run
     virtual int action_console_gateway_run(const string_t& action, int argc, char_t** argv, char_t** env) {
         int err = 0;
         int unequal = 0;
-        const string_t& pigpio_on_option = this->pigpio_on_option();
-        if (!(unequal = pigpio_on_option.compare(action))) {
-            LOGGER_IS_LOGGED_INFO("(!(err = pigpio_on_console_gateway_run(argc, argv, env)))...");
-            if (!(err = pigpio_on_console_gateway_run(argc, argv, env))) {
-                LOGGER_IS_LOGGED_INFO("...(!(" << err << " = pigpio_on_console_gateway_run(argc, argv, env)))");
+        const string_t& gpio_on_option = this->gpio_on_option();
+        if (!(unequal = gpio_on_option.compare(action))) {
+            LOGGER_IS_LOGGED_INFO("(!(err = gpio_on_console_gateway_run(argc, argv, env)))...");
+            if (!(err = gpio_on_console_gateway_run(argc, argv, env))) {
+                LOGGER_IS_LOGGED_INFO("...(!(" << err << " = gpio_on_console_gateway_run(argc, argv, env)))");
             } else {
-                LOGGER_IS_LOGGED_INFO("...failed on (!(" << err << " = pigpio_on_console_gateway_run(argc, argv, env)))");
+                LOGGER_IS_LOGGED_INFO("...failed on (!(" << err << " = gpio_on_console_gateway_run(argc, argv, env)))");
             }
         } else {
-            const string_t& pigpio_off_option = this->pigpio_off_option();
-            if (!(unequal = pigpio_off_option.compare(action))) {
-                LOGGER_IS_LOGGED_INFO("(!(err = pigpio_off_console_gateway_run(argc, argv, env)))...");
-                if (!(err = pigpio_off_console_gateway_run(argc, argv, env))) {
-                    LOGGER_IS_LOGGED_INFO("...(!(" << err << " = pigpio_off_console_gateway_run(argc, argv, env)))");
+            const string_t& gpio_off_option = this->gpio_off_option();
+            if (!(unequal = gpio_off_option.compare(action))) {
+                LOGGER_IS_LOGGED_INFO("(!(err = gpio_off_console_gateway_run(argc, argv, env)))...");
+                if (!(err = gpio_off_console_gateway_run(argc, argv, env))) {
+                    LOGGER_IS_LOGGED_INFO("...(!(" << err << " = gpio_off_console_gateway_run(argc, argv, env)))");
                 } else {
-                    LOGGER_IS_LOGGED_INFO("...failed on (!(" << err << " = pigpio_off_console_gateway_run(argc, argv, env)))");
+                    LOGGER_IS_LOGGED_INFO("...failed on (!(" << err << " = gpio_off_console_gateway_run(argc, argv, env)))");
                 }
             } else {
-                const string_t& pigpio_state_option = this->pigpio_state_option();
-                if (!(unequal = pigpio_state_option.compare(action))) {
-                    LOGGER_IS_LOGGED_INFO("(!(err = pigpio_state_console_gateway_run(argc, argv, env)))...");
-                    if (!(err = pigpio_state_console_gateway_run(argc, argv, env))) {
-                        LOGGER_IS_LOGGED_INFO("...(!(" << err << " = pigpio_state_console_gateway_run(argc, argv, env)))");
+                const string_t& gpio_state_option = this->gpio_state_option();
+                if (!(unequal = gpio_state_option.compare(action))) {
+                    LOGGER_IS_LOGGED_INFO("(!(err = gpio_state_console_gateway_run(argc, argv, env)))...");
+                    if (!(err = gpio_state_console_gateway_run(argc, argv, env))) {
+                        LOGGER_IS_LOGGED_INFO("...(!(" << err << " = gpio_state_console_gateway_run(argc, argv, env)))");
                     } else {
-                        LOGGER_IS_LOGGED_INFO("...failed on (!(" << err << " = pigpio_state_console_gateway_run(argc, argv, env)))");
+                        LOGGER_IS_LOGGED_INFO("...failed on (!(" << err << " = gpio_state_console_gateway_run(argc, argv, env)))");
                     }
                 } else {
-                    LOGGER_IS_LOGGED_INFO("(!(err = this->all_console_gateway_out_run(argc, argv, env)))...");
-                    if (!(err = this->all_console_gateway_out_run(argc, argv, env))) {
-                        LOGGER_IS_LOGGED_INFO("...(!(" << err << " = this->all_console_gateway_out_run(argc, argv, env)))");
+                    const string_t& system_restart_option = this->system_restart_option();
+                    if (!(unequal = system_restart_option.compare(action))) {
+                        LOGGER_IS_LOGGED_INFO("(!(err = system_restart_console_gateway_run(argc, argv, env)))...");
+                        if (!(err = system_restart_console_gateway_run(argc, argv, env))) {
+                            LOGGER_IS_LOGGED_INFO("...(!(" << err << " = system_restart_console_gateway_run(argc, argv, env)))");
+                        } else {
+                            LOGGER_IS_LOGGED_INFO("...failed on (!(" << err << " = system_restart_console_gateway_run(argc, argv, env)))");
+                        }
                     } else {
-                        LOGGER_IS_LOGGED_INFO("...failed on (!(" << err << " = this->all_console_gateway_out_run(argc, argv, env)))");
+                        const string_t& system_start_option = this->system_start_option();
+                        if (!(unequal = system_start_option.compare(action))) {
+                            LOGGER_IS_LOGGED_INFO("(!(err = system_start_console_gateway_run(argc, argv, env)))...");
+                            if (!(err = system_start_console_gateway_run(argc, argv, env))) {
+                                LOGGER_IS_LOGGED_INFO("...(!(" << err << " = system_start_console_gateway_run(argc, argv, env)))");
+                            } else {
+                                LOGGER_IS_LOGGED_INFO("...failed on (!(" << err << " = system_start_console_gateway_run(argc, argv, env)))");
+                            }
+                        } else {
+                            const string_t& system_stop_option = this->system_stop_option();
+                            if (!(unequal = system_stop_option.compare(action))) {
+                                LOGGER_IS_LOGGED_INFO("(!(err = system_stop_console_gateway_run(argc, argv, env)))...");
+                                if (!(err = system_stop_console_gateway_run(argc, argv, env))) {
+                                    LOGGER_IS_LOGGED_INFO("...(!(" << err << " = system_stop_console_gateway_run(argc, argv, env)))");
+                                } else {
+                                    LOGGER_IS_LOGGED_INFO("...failed on (!(" << err << " = system_stop_console_gateway_run(argc, argv, env)))");
+                                }
+                            } else {
+                                LOGGER_IS_LOGGED_INFO("(!(err = this->all_console_gateway_out_run(argc, argv, env)))...");
+                                if (!(err = this->all_console_gateway_out_run(argc, argv, env))) {
+                                    LOGGER_IS_LOGGED_INFO("...(!(" << err << " = this->all_console_gateway_out_run(argc, argv, env)))");
+                                } else {
+                                    LOGGER_IS_LOGGED_INFO("...failed on (!(" << err << " = this->all_console_gateway_out_run(argc, argv, env)))");
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -510,32 +585,37 @@ protected:
     }
     //////////////////////////////////////////////////////////////////////////
     /// ...pigpio...option...
-    virtual string_t& set_pigpio_on_option(const string_t& to) {
-        string_t& pigpio_on_option = this->pigpio_on_option();
-        pigpio_on_option.assign(to);
-        return pigpio_on_option;
+    virtual string_t& set_gpio_on_option(const string_t& to) {
+        string_t& gpio_on_option = this->gpio_on_option();
+        gpio_on_option.assign(to);
+        return gpio_on_option;
     }
-    virtual string_t& pigpio_on_option() const {
-        return (string_t&) pigpio_on_option_;
+    virtual string_t& gpio_on_option() const {
+        return (string_t&) gpio_on_option_;
     }
-    virtual string_t& set_pigpio_off_option(const string_t& to) {
-        string_t& pigpio_off_option = this->pigpio_off_option();
-        pigpio_off_option.assign(to);
-        return pigpio_off_option;
+    virtual string_t& set_gpio_off_option(const string_t& to) {
+        string_t& gpio_off_option = this->gpio_off_option();
+        gpio_off_option.assign(to);
+        return gpio_off_option;
     }
-    virtual string_t& pigpio_off_option() const {
-        return (string_t&) pigpio_off_option_;
+    virtual string_t& gpio_off_option() const {
+        return (string_t&) gpio_off_option_;
     }
-    virtual string_t& set_pigpio_state_option(const string_t& to) {
-        string_t& pigpio_state_option = this->pigpio_state_option();
-        pigpio_state_option.assign(to);
-        return pigpio_state_option;
+    virtual string_t& set_gpio_state_option(const string_t& to) {
+        string_t& gpio_state_option = this->gpio_state_option();
+        gpio_state_option.assign(to);
+        return gpio_state_option;
     }
-    virtual string_t& pigpio_state_option() const {
-        return (string_t&) pigpio_state_option_;
+    virtual string_t& gpio_state_option() const {
+        return (string_t&) gpio_state_option_;
     }
     //////////////////////////////////////////////////////////////////////////
     /// ...system...option...
+    virtual string_t& set_system_restart_option(const string_t& to) {
+        string_t& system_restart_option = this->system_restart_option();
+        system_restart_option.assign(to);
+        return system_restart_option;
+    }
     virtual string_t& system_restart_option() const {
         return (string_t&) system_restart_option_;
     }
@@ -560,7 +640,7 @@ protected:
     //////////////////////////////////////////////////////////////////////////
 protected:
     bool response_was_output_, response_dont_output_;
-    string_t pigpio_on_option_, pigpio_off_option_, pigpio_state_option_,
+    string_t gpio_on_option_, gpio_off_option_, gpio_state_option_,
              system_restart_option_, system_start_option_, system_stop_option_;
 }; /// class main_optt 
 typedef main_optt<> main_opt;
